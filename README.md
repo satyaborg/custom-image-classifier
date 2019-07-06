@@ -900,3 +900,9 @@ learn1.export()
 ```
 
 This exported trained model can now be  served in the backend  for inference on the web.
+
+## References
+
+[1] https://course.fast.ai/videos/?lesson=2
+
+[2] https://course.fast.ai/deployment_render.html
