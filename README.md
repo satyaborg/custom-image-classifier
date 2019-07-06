@@ -87,7 +87,7 @@ path.ls()
 
 ```
 for idx, c in enumerate(classes):
-    
+
     file = files[idx]
     download_images(path/file, path/c, max_pics=200)
 ```
@@ -141,7 +141,7 @@ data.show_batch(rows=5, fig_size=(5,5))
 ```
 
 
-![png](custom_image_classifier_files/custom_image_classifier_17_0.png)
+![png](/images/1.png)
 
 
 
@@ -174,7 +174,7 @@ learn.summary()
 
     Sequential
     ======================================================================
-    Layer (type)         Output Shape         Param #    Trainable 
+    Layer (type)         Output Shape         Param #    Trainable
     ======================================================================
     Conv2d               [64, 112, 112]       9,408      False     
     ______________________________________________________________________
@@ -376,15 +376,15 @@ learn.summary()
     ______________________________________________________________________
     Linear               [4]                  2,052      True      
     ______________________________________________________________________
-    
+
     Total params: 21,814,596
     Total trainable params: 546,948
     Total non-trainable params: 21,267,648
     Optimized with 'torch.optim.adam.Adam', betas=(0.9, 0.99)
-    Using true weight decay as discussed in https://www.fast.ai/2018/07/02/adam-weight-decay/ 
+    Using true weight decay as discussed in https://www.fast.ai/2018/07/02/adam-weight-decay/
     Loss function : FlattenedLoss
     ======================================================================
-    Callbacks functions applied 
+    Callbacks functions applied
 
 
 
@@ -624,7 +624,7 @@ learn.lr_find()
     LR Finder is complete, type {learner_name}.recorder.plot() to see the graph.
 
 
-### Find an approximate mid point in the steepest downward  slope 
+### Find an approximate mid point in the steepest downward  slope
 
 
 ```
@@ -636,7 +636,7 @@ learn.recorder.plot(suggestion=True)
 
 
 
-![png](custom_image_classifier_files/custom_image_classifier_28_1.png)
+![png](/images/2.png)
 
 
 
@@ -709,21 +709,21 @@ learn.load('stage-2')
 
 
     Learner(data=ImageDataBunch;
-    
+
     Train: LabelList (278 items)
     x: ImageList
     Image (3, 224, 224),Image (3, 224, 224),Image (3, 224, 224),Image (3, 224, 224),Image (3, 224, 224)
     y: CategoryList
     greenwing,greenwing,greenwing,greenwing,greenwing
     Path: drive/My Drive/fast.ai/macaws;
-    
+
     Valid: LabelList (69 items)
     x: ImageList
     Image (3, 224, 224),Image (3, 224, 224),Image (3, 224, 224),Image (3, 224, 224),Image (3, 224, 224)
     y: CategoryList
     scarlet,hahn,scarlet,scarlet,scarlet
     Path: drive/My Drive/fast.ai/macaws;
-    
+
     Test: None, model=Sequential(
       (0): Sequential(
         (0): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
@@ -991,7 +991,7 @@ intrp.plot_confusion_matrix()
 ```
 
 
-![png](custom_image_classifier_files/custom_image_classifier_35_0.png)
+![png](/images/3.png)
 
 
 Around 6% error rate
@@ -1014,7 +1014,7 @@ intrp.plot_top_losses(4)
 ```
 
 
-![png](custom_image_classifier_files/custom_image_classifier_38_0.png)
+![png](/images/4.png)
 
 
 ## Cleaning Noisy Images
@@ -1064,21 +1064,21 @@ db
 
 
     ImageDataBunch;
-    
+
     Train: LabelList (347 items)
     x: ImageList
     Image (3, 224, 224),Image (3, 224, 224),Image (3, 224, 224),Image (3, 224, 224),Image (3, 224, 224)
     y: CategoryList
     hahn,hahn,hahn,hahn,hahn
     Path: drive/My Drive/fast.ai/macaws;
-    
+
     Valid: LabelList (0 items)
     x: ImageList
-    
+
     y: CategoryList
-    
+
     Path: drive/My Drive/fast.ai/macaws;
-    
+
     Test: None
 
 
@@ -1142,7 +1142,7 @@ img
 
 
 
-![png](custom_image_classifier_files/custom_image_classifier_53_0.png)
+![png](/images/5.png)
 
 
 
@@ -1161,21 +1161,21 @@ learn1.load('stage-2')
 
 
     Learner(data=ImageDataBunch;
-    
+
     Train: LabelList (0 items)
     x: ImageList
-    
+
     y: CategoryList
-    
+
     Path: drive/My Drive/fast.ai/macaws;
-    
+
     Valid: LabelList (0 items)
     x: ImageList
-    
+
     y: CategoryList
-    
+
     Path: drive/My Drive/fast.ai/macaws;
-    
+
     Test: None, model=Sequential(
       (0): Sequential(
         (0): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
